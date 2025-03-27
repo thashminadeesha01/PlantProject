@@ -7,7 +7,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 export default function Upper() {
     return (
         <div>
-            <h2 className="mt-4 text-2xl text-center text-green-700 max-w-[1700px] font-serif md:text-4xl">
+            <h2 id="about" className="mt-4 text-2xl text-center text-green-700 max-w-[1700px] font-serif md:text-4xl">
                 <u>Weekly Featured Plants</u>
             </h2>
 
@@ -76,17 +76,17 @@ export default function Upper() {
                 </Swiper>
             </div>
 
-            {/* About Us Section */}
+            {/* About Us Section with id */}
             <div className="p-4 mx-2 mt-4 mb-4 text-center bg-green-100 border-2 border-green-700 rounded-lg shadow-md sm:p-6 md:p-8 sm:mx-4 md:mx-8">
-    <h2 className="text-3xl font-semibold text-green-700 sm:text-4xl md:text-5xl">About Us</h2>
-    <p className="px-4 mt-4 text-base text-gray-700 sm:px-6 md:px-10 sm:text-lg">
-        Welcome to our plant store! We are passionate about bringing nature closer to you. 
-        Our mission is to provide high-quality plants that enhance your home and garden. We 
-        offer a diverse selection of plants, from low-maintenance indoor greenery to vibrant outdoor varieties, along with expert care tips and accessories to help you nurture them with ease. Whether you're a seasoned plant enthusiast or just starting, our team is here to guide you in choosing the perfect plants for your space. 
-        Explore our collection and discover the beauty of greenery.
-    </p>
-</div>
+                <h2 className="text-3xl font-semibold text-green-700 sm:text-4xl md:text-5xl">About Us</h2>
+                <p className="px-4 mt-4 text-base text-gray-700 sm:px-6 md:px-10 sm:text-lg">
+                    Welcome to our plant store! We are passionate about bringing nature closer to you. 
+                    Our mission is to provide high-quality plants that enhance your home and garden. We 
+                    offer a diverse selection of plants, from low-maintenance indoor greenery to vibrant outdoor varieties, along with expert care tips and accessories to help you nurture them with ease. Whether you're a seasoned plant enthusiast or just starting, our team is here to guide you in choosing the perfect plants for your space. 
+                    Explore our collection and discover the beauty of greenery.
+                </p>
+            </div>
 
         </div>
     );
-}   
+}

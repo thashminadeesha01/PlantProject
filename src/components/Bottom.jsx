@@ -1,44 +1,57 @@
 import React from "react";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+} from "react-icons/fa";
 
 const reviews = [
   {
     name: "Emily R.",
-    review: "I ordered a few indoor plants, and they arrived in perfect condition! The packaging was eco-friendly, and the plants were super healthy.",
+    review:
+      "I ordered a few indoor plants, and they arrived in perfect condition! The packaging was eco-friendly, and the plants were super healthy.",
     rating: 5,
   },
   {
     name: "David S.",
-    review: "I was hesitant to buy plants online, but this store exceeded my expectations. The plants were well-hydrated, and the care guide was helpful.",
+    review:
+      "I was hesitant to buy plants online, but this store exceeded my expectations. The plants were well-hydrated, and the care guide was helpful.",
     rating: 4,
   },
   {
     name: "Sophia L.",
-    review: "I had a few questions before ordering, and the support team was so friendly! My snake plant is thriving, and I can't wait to buy more.",
+    review:
+      "I had a few questions before ordering, and the support team was so friendly! My snake plant is thriving, and I can't wait to buy more.",
     rating: 5,
   },
   {
     name: "Michael T.",
-    review: "Great quality plants and fast delivery! My home office looks amazing now. Highly recommend!",
+    review:
+      "Great quality plants and fast delivery! My home office looks amazing now. Highly recommend!",
     rating: 5,
   },
   {
     name: "Olivia W.",
-    review: "The website was easy to navigate, and I found exactly what I needed. The plants were fresh and well-packaged.",
+    review:
+      "The website was easy to navigate, and I found exactly what I needed. The plants were fresh and well-packaged.",
     rating: 4,
   },
   {
     name: "Daniel K.",
-    review: "Superb customer service and great variety of plants! Will definitely be ordering again.",
+    review:
+      "Superb customer service and great variety of plants! Will definitely be ordering again.",
     rating: 5,
-  }
+  },
 ];
 
-export default function Upper() {
+export default function Bottom() {
   return (
     <div>
       {/* Header Section */}
-      <div className="py-4 mt-3 text-center max-w-[1700px] text-white bg-green-900">
+      <div id="shop" className="py-4 mt-3 text-center max-w-[1700px] text-white bg-green-900">
         <h2 className="text-2xl font-semibold md:text-5xl">Shops</h2>
       </div>
 
@@ -86,23 +99,16 @@ export default function Upper() {
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="p-6 border rounded-lg shadow-md bg-green-50"
-            >
+            <div key={index} className="p-6 border rounded-lg shadow-md bg-green-50">
               <p className="text-lg italic text-gray-700">"{review.review}"</p>
-              <h4 className="mt-4 text-xl font-semibold text-green-800">
-                {review.name}
-              </h4>
+              <h4 className="mt-4 text-xl font-semibold text-green-800">{review.name}</h4>
 
               {/* Star Ratings */}
               <div className="flex mt-2">
                 {Array(review.rating)
                   .fill()
                   .map((_, i) => (
-                    <span key={i} className="text-xl text-yellow-400">
-                      ★
-                    </span>
+                    <span key={i} className="text-xl text-yellow-400">★</span>
                   ))}
               </div>
             </div>
@@ -111,12 +117,11 @@ export default function Upper() {
       </div>
 
       {/* Contact Information Section */}
-      <div className="py-10 text-white bg-green-900">
+      <div id="contact" className="py-10 text-white bg-green-900">
         <div className="max-w-5xl px-6 mx-auto text-center">
           <h2 className="text-3xl font-bold">Contact Us</h2>
           <p className="mt-2 text-lg text-gray-300">
-            We'd love to hear from you! Reach out with any questions or
-            feedback.
+            We'd love to hear from you! Reach out with any questions or feedback.
           </p>
 
           <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-3">
