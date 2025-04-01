@@ -6,16 +6,17 @@ export default function Upper() {
 
   return (
     <div>
-      {/* Top Navbar */}
-      <div className="flex items-center justify-between max-w-[1700px] px-6 py-4 bg-green-950">
-        <h2 className="text-3xl italic font-bold text-white">Indore Blooms</h2>
+      {/* Top Navbar with Hover Effect */}
+      <div className="flex fixed items-center justify-between max-w-[1700px] z-40 w-full px-6 py-4 bg-green-950 transition-all duration-300">
+        <h2 className="text-4xl font-bold text-yellow-600">Indore Blooms</h2>
 
         {/* Desktop Navigation (Hidden on Small Screens) */}
-        <div className="hidden gap-12 text-white md:flex">
-          <a href="#home" className="hover:text-yellow-400">Home</a>
-          <a href="#shop" className="hover:text-yellow-400">Shop</a>
-          <a href="#about" className="hover:text-yellow-400">About</a>
-          <a href="#contact" className="hover:text-yellow-400">Contact</a>
+        <div className="hidden gap-6 text-white md:flex ">
+          <a href="#home" className="px-4 py-2 transition-all duration-300 bg-green-800 rounded-md hover:bg-yellow-400 hover:text-green-900">Home</a>
+          <a href="#about" className="px-4 py-2 transition-all duration-300 bg-green-800 rounded-md hover:bg-yellow-400 hover:text-green-900">About</a>
+          <a href="#shop" className="px-4 py-2 transition-all duration-300 bg-green-800 rounded-md hover:bg-yellow-400 hover:text-green-900">Shop</a>
+          <a href="#reviews" className="px-4 py-2 transition-all duration-300 bg-green-800 rounded-md hover:bg-yellow-400 hover:text-green-900">Reviews</a>
+          <a href="#contact" className="px-4 py-2 transition-all duration-300 bg-green-800 rounded-md hover:bg-yellow-400 hover:text-green-900">Contact</a>
         </div>
 
         {/* Mobile Menu Button (Only on Small Screens) */}
@@ -24,24 +25,29 @@ export default function Upper() {
         </button>
       </div>
 
-      {/* Mobile Navigation Menu (Visible when toggled) */}
-      {isOpen && (
-  <div className="absolute right-0 left-auto z-50 flex flex-col items-end gap-4 py-4 pr-6 text-white bg-green-400 w-35 top-10 md:hidden">
-    <a href="#home" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>Home</a>
-    <a href="#shop" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>Shop</a>
-    <a href="#about" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>About</a>
-    <a href="#contact" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>Contact</a>
-  </div>
-)}
-
+      {/* Mobile Navigation Menu (Fixed Sidebar) */}
+      <div
+        className={`fixed top-0 right-0 w-[180px] h-auto z-40 bg-green-400 text-white flex flex-col gap-4 p-6 shadow-lg transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } md:hidden`}
+      >
+        <button className="self-end" onClick={() => setIsOpen(false)}>
+          <X size={28} />
+        </button>
+        <a href="#home" className="px-4 py-2 bg-green-500 rounded-md hover:bg-yellow-400 hover:text-green-900" onClick={() => setIsOpen(false)}>Home</a>
+        <a href="#about" className="px-4 py-2 bg-green-500 rounded-md hover:bg-yellow-400 hover:text-green-900" onClick={() => setIsOpen(false)}>About</a>
+        <a href="#shop" className="px-4 py-2 bg-green-500 rounded-md hover:bg-yellow-400 hover:text-green-900" onClick={() => setIsOpen(false)}>Shop</a>
+        <a href="#reviews" className="px-4 py-2 bg-green-500 rounded-md hover:bg-yellow-400 hover:text-green-900" onClick={() => setIsOpen(false)}>Reviews</a>
+        <a href="#contact" className="px-4 py-2 bg-green-500 rounded-md hover:bg-yellow-400 hover:text-green-900" onClick={() => setIsOpen(false)}>Contact</a>
+      </div>
 
       {/* Home Section */}
-      <section id="home" className="flex flex-col-reverse items-center px-6 py-6 text-white bg-green-900 md:px-20 md:flex-row-reverse h-auto md:h-[700px]">
+      <section id="home" className="flex flex-col-reverse z-10 items-center px-6 py-6 text-white bg-green-900 md:px-20 md:flex-row-reverse h-auto md:h-[750px]">
         {/* Left Side Text */}
         <div className="max-w-3xl text-center md:text-left md:flex-1">
           <h1 className="mt-10 text-4xl font-bold leading-tight md:text-5xl">
-            <span className="text-yellow-400">Plants</span> make{" "}
-            <span className="text-yellow-400">Life</span> better
+            <span className="text-green-200">Plants</span> make{" "}
+            <span className="text-green-200">Life</span> better
           </h1>
           <p className="mt-6 text-lg text-gray-300 md:text-xl">
             Welcome to our online plant shop! We offer a variety of plants with easy-to-follow care tips and delivery right to your door.
@@ -61,10 +67,10 @@ export default function Upper() {
           <img
             src="images/k.png"
             alt="Plants"
-            className="object-contain w-40 sm:w-56 md:w-[500px] lg:w-[600px] h-auto max-h-[700px]"
+            className="object-contain w-40 sm:w-56 md:w-[500px] lg:w-[600px] h-auto max-h-[750px]"
           />
         </div>
       </section>
     </div>
   );
-}
+}   

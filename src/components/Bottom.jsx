@@ -59,13 +59,13 @@ export default function Bottom() {
       <div className="mx-12 mt-5 mb-4 rounded-lg">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
           {[
-            { src: "images/PA.jpg", price: "Rs.150.00" },
-            { src: "images/PB.jpeg", price: "Rs.369.00" },
-            { src: "images/PC.jpg", price: "Rs.750.00" },
-            { src: "images/PD.jpeg", price: "Rs.500.00" },
+            { src: "images/PB.avif", price: "Rs.150.00" },
+            { src: "images/PA.jpg", price: "Rs.369.00" },
+            { src: "images/PC.avif", price: "Rs.750.00" },
+            { src: "images/PD.avif", price: "Rs.500.00" },
             { src: "images/PE.jpg", price: "Rs.275.00" },
-            { src: "images/PF.jpeg", price: "Rs.525.00" },
-            { src: "images/PG.jpeg", price: "Rs.400.00" },
+            { src: "images/PF.jpg", price: "Rs.525.00" },
+            { src: "images/PG.avif", price: "Rs.400.00" },
             { src: "images/PH.jpg", price: "Rs.620.00" },
           ].map((item, index) => (
             <div
@@ -79,7 +79,7 @@ export default function Bottom() {
               />
 
               {/* Price Overlay on Hover */}
-              <div className="absolute bottom-0 left-0 w-full transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 h-1/2 hover:opacity-100">
+              <div className="absolute bottom-0 left-0 w-full transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 h-[100px] hover:opacity-100">
                 <div className="flex items-center justify-center w-full bg-gray-200 rounded-lg shadow-xl h-1/2 bg-opacity-60">
                   <span className="px-4 py-2 text-xl font-bold text-white bg-green-600 rounded-lg shadow-lg">
                     {item.price}
@@ -92,7 +92,7 @@ export default function Bottom() {
       </div>
 
       {/* Customer Reviews Section */}
-      <div className="max-w-6xl p-6 mx-auto my-10 bg-white rounded-lg shadow-lg">
+      <div id="reviews" className="max-w-6xl p-6 mx-auto my-10 bg-white rounded-lg shadow-lg">
         <h2 className="mb-6 text-3xl font-bold text-center text-green-700">
           What Our Customers Say
         </h2>
@@ -160,4 +160,4 @@ export default function Bottom() {
       </div>
     </div>
   );
-}
+}    
